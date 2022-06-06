@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CadastroDeFuncionarios">
         <activity
+            android:name=".RegisterEmailPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PresentInformationActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
