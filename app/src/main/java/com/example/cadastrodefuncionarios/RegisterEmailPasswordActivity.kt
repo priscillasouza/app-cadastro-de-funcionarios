@@ -3,6 +3,7 @@ package com.example.cadastrodefuncionarios
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import com.example.cadastrodefuncionarios.databinding.ActivityRegisterEmailPasswordBinding
 
 class RegisterEmailPasswordActivity : AppCompatActivity() {
@@ -14,11 +15,26 @@ class RegisterEmailPasswordActivity : AppCompatActivity() {
         binding = ActivityRegisterEmailPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbarRegisterEmailPassword)
+
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+
         getEmailPassword()
 
         binding.buttonRegisterEmailPassword.setOnClickListener {
             registerEmailPassword()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun getEmailPassword() {

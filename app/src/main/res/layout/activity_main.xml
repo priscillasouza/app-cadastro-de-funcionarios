@@ -1,74 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="32dp"
-        android:orientation="vertical"
-        tools:context=".RegisterUserFragment">
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/textViewTitleRegisterEmployee"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarRegisterEmployee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:text="Cadastro de funcionários"
-            android:textAlignment="center"
-            android:textColor="@color/purple_700"
-            android:textSize="24sp" />
+            android:background="@color/teal_700"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarRegisterEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:navigationIconTint="@color/white"
+                app:title="@string/text_toolbar_register_employee"
+                app:titleCentered="true"
+                app:titleTextColor="@color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextNameEmployee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:hint="Nome"
-            android:inputType="textAutoComplete" />
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="80dp"
+            android:hint="@string/text_hint_name_employee"
+            android:inputType="textAutoComplete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarRegisterEmployee" />
 
-        <EditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextCpfEmployee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
             android:layout_marginTop="16dp"
-            android:hint="CPF"
-            android:inputType="number" />
+            android:hint="@string/text_hint_cpf_employee"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/editTextNameEmployee"
+            app:layout_constraintStart_toStartOf="@id/editTextNameEmployee"
+            app:layout_constraintTop_toBottomOf="@id/editTextNameEmployee" />
 
-        <EditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextAgeEmployee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
             android:layout_marginTop="16dp"
-            android:hint="Idade"
-            android:inputType="number" />
+            android:hint="@string/text_hint_age_employee"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/editTextCpfEmployee"
+            app:layout_constraintStart_toStartOf="@id/editTextCpfEmployee"
+            app:layout_constraintTop_toBottomOf="@id/editTextCpfEmployee" />
 
-        <EditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextProfessionEmployee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
             android:layout_marginTop="16dp"
-            android:hint="Profissão"
-            android:inputType="textAutoComplete" />
+            android:hint="@string/text_hint_profession_employee"
+            android:inputType="textAutoComplete"
+            app:layout_constraintEnd_toEndOf="@id/editTextAgeEmployee"
+            app:layout_constraintStart_toStartOf="@id/editTextAgeEmployee"
+            app:layout_constraintTop_toBottomOf="@id/editTextAgeEmployee" />
 
-        <EditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextWageEmployee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
             android:layout_marginTop="16dp"
-            android:hint="Salário"
-            android:inputType="number" />
+            android:hint="@string/text_hint_wage_employee"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/editTextProfessionEmployee"
+            app:layout_constraintStart_toStartOf="@id/editTextProfessionEmployee"
+            app:layout_constraintTop_toBottomOf="@id/editTextProfessionEmployee" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_register_user"
-            android:layout_width="match_parent"
+            style="@style/Text_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Cadastrar funcionário"
-            android:textAllCaps="false" />
-    </LinearLayout>
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_button"
+            android:text="@string/text_button_register_employee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.737"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextWageEmployee"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

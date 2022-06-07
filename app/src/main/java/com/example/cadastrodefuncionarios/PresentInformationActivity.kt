@@ -2,6 +2,7 @@ package com.example.cadastrodefuncionarios
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import com.example.cadastrodefuncionarios.databinding.ActivityPresentInformationBinding
 
 class PresentInformationActivity : AppCompatActivity() {
@@ -12,7 +13,23 @@ class PresentInformationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPresentInformationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbarRegisterEmailPassword)
+
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+
         getEmployee()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun getEmployee() {
