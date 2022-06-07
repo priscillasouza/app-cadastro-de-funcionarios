@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Cadastro de funcionarios</string>
+    <string name="title_register_email_password">Para prosseguir cadastre seu email e senha</string>
+    <string name="text_hint_register_email">Email</string>
+    <string name="text_hint_register_password">Senha</string>
+    <string name="text_button_register_email_password">Cadastrar email e senha</string>
+    <string name="text_title_register_employee">Cadastro de funcionários</string>
+    <string name="text_hint_name_employee">Nome</string>
+    <string name="text_hint_cpf_employee">CPF</string>
+    <string name="text_hint_age_employee">Idade</string>
+    <string name="text_hint_profession_employee">Profissão</string>
+    <string name="text_hint_wage_employee">Salário</string>
+    <string name="text_button_register_employee">Cadastrar funcionário</string>
+    <string name="text_title_information_employee">Dados do funcionário</string>
+    <string name="text_toolbar_register_employee">Cadastro do funcionário</string>
+    <string name="text_title_toolbar_email_password">Email e senha</string>
+    <string name="text_title_toolbar_information_employee">Dados do funcionário</string>
 </resources>
