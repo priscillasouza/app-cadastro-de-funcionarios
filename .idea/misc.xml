@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/layout/activity_present_information.xml" value="0.3171875" />
-        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/layout/activity_register_email_password.xml" value="0.3171875" />
+        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.199" />
+        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/drawable/background_button.xml" value="0.184" />
+        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/drawable/ic_launcher_background.xml" value="0.199" />
+        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/layout/activity_present_information.xml" value="0.10034602076124567" />
+        <entry key="..\:/Users/prisc/Documents/Cadastrodefuncionarios/app/src/main/res/layout/activity_register_email_password.xml" value="0.10034602076124567" />
       </map>
     </option>
   </component>
